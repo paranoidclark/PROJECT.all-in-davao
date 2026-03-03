@@ -1,0 +1,81 @@
+.footer-page {
+  min-height: 40vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background: darkslategray;
+  color: white;
+  font-weight: 300;
+}
+
+.footer-page h3 {
+  font-weight: lighter;
+  letter-spacing: 2px;
+}
+
+.first-row {
+  width: 100%;
+  height: 100%;
+  padding: 1rem 2rem;
+  box-sizing: border-box;
+  flex: 3;
+  display: flex;
+  justify-content: space-around;
+}
+
+.information-section {
+  display: flex;
+  gap: 2.5rem;
+}
+
+.sub-section ul {
+  list-style: none;
+  line-height: 2.5em;
+  padding: 0;
+}
+
+.subscription-area p {
+  width: 60%;
+  text-wrap: wrap;
+}
+
+.signup-email {
+  background: transparent;
+  padding-bottom: 12px;
+  border: none;
+  border-bottom: 2px solid white;
+  padding-right: 80px;
+  caret-color: white;
+}
+
+.signup-email,
+select {
+  color: white;
+  font-weight: 300;
+  font-size: 0.9rem;
+}
+
+.signup-email::placeholder {
+  font-size: 0.9rem;
+  font-weight: 200;
+  padding-bottom: 20px;
+}
+
+.signup-email:focus {
+  outline: none;
+}
+
+.sub-icons {
+  margin-top: 1rem;
+  display: flex;
+  gap: 2rem;
+}
+
+/* Copyright row */
+
+.second-row {
+  flex: 1;
+  align-self: center;
+
+  font-size: 12px;
+}

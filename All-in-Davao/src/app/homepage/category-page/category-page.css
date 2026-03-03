@@ -1,0 +1,153 @@
+.category-page {
+  min-height: 85vh;
+  height: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 0 2rem;
+  box-sizing: border-box;
+}
+
+.main-container {
+  min-width: 100%;
+  max-width: 1400px;
+  display: flex;
+  gap: 4rem;
+
+  align-items: center;
+}
+
+.description {
+  flex: 1;
+  top: 100px;
+}
+
+.description h3 {
+  font-size: 4em;
+  margin: 0;
+  color: orangered;
+}
+
+.description h3 span {
+  color: darkolivegreen;
+}
+
+.description p {
+  font-size: 1.2em;
+}
+
+.description button {
+  border: none;
+  background: none;
+  outline: none;
+
+  display: flex;
+  gap: 10px;
+
+  cursor: pointer;
+}
+
+.masonry-container {
+  flex: 2;
+
+  display: grid;
+  gap: 1em;
+  grid-template-columns: 30fr 23fr 27fr 20fr;
+  grid-template-rows: minmax(200px, auto) minmax(100px, auto) minmax(266.67px, auto);
+  grid-template-areas:
+    "box-1 box-2 box-3 box-4"
+    "box-1 box-2 box-3 box-6"
+    "box-1 box-5 box-5 box-6";
+}
+
+/* Categories */
+
+.p-style {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: white;
+  letter-spacing: 2px;
+  box-sizing: border-box;
+
+  margin: 0;
+  padding: 15px 25px;
+  border: 2px solid white;
+  cursor: pointer;
+
+}
+
+.accommodation .p-style {
+  font-size: 0.8em;
+}
+
+.attractions, .shopping, .entertainment, .accommodation, .foodscene, .art-history {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.attractions {
+  background-image:
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+    url('/images/masonry-attractions.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.shopping {
+  background-color: orangered;
+
+  background-image:
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+    url('/images/masonry-shopping.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.entertainment {
+  background-color: darkolivegreen;
+
+  background-image:
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url('/images/masonry-entertainment.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.accommodation {
+  background-color: darkorange;
+
+  background-image:
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url('/images/masonry-accommodations.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.foodscene {
+  background-color: brown;
+
+  background-image:
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url('/images/masonry-foodscene.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.art-history {
+  background-color: goldenrod;
+
+  background-image:
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url('/images/masonry-art&museum.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}

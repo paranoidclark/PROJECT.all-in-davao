@@ -1,0 +1,43 @@
+<section class="detail-page">
+
+  <div class="footprint">
+    <ul class="footprint-list">
+      <li><a routerLink="/home">Home</a></li>
+      <li class="separator">/</li> <li><a [routerLink]="['/explore', category()]">{{category()}}</a></li>
+      <li class="separator">/</li>
+      <li>{{ placeData?.name }}</li>
+    </ul>
+  </div>
+
+  <div class="detail-section">
+    <div class="image-area">
+      <img [src]="placeData?.image?.imageURL" [alt]="placeData?.image?.name" class="detail-image">
+    </div>
+
+    <div class="description-area">
+      <h2 class="place-title">{{ placeData?.name }}</h2>
+
+      <div class="place-rating">★ {{ placeData?.rating }}</div>
+      <p class="place-location">📍 {{ placeData?.location }}</p>
+    </div>
+  </div>
+
+  <div class="sub-menu">
+    <div class="menu-item active">
+      <p>The Details</p>
+    </div>
+
+    <div class="menu-item">
+      <p>Ratings & Reviews</p>
+    </div>
+
+    <div class="menu-item">
+      <p>Discussion</p>
+    </div>
+  </div>
+
+  <div class="sub-section">
+    <router-outlet />
+  </div>
+
+</section>

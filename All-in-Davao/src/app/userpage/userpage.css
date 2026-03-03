@@ -1,0 +1,110 @@
+/* 1. Background Wrapper (Unchanged) */
+.profile-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f9fafb;
+  padding: 2rem;
+  font-family: sans-serif;
+}
+
+/* 2. The Profile Card */
+.profile-card {
+  background: white;
+  width: 100%;
+  max-width: 480px; /* Widened slightly for the horizontal layout */
+  padding: 3rem 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05), 0 10px 15px rgba(0, 0, 0, 0.1);
+
+  /* CRITICAL: Allows the logout button to pin to the corners of this card */
+  position: relative;
+}
+
+/* 3. The New Horizontal Layout Container */
+.profile-content {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem; /* The space between the avatar and the text */
+}
+
+/* 4. The Avatar Circle */
+.profile-avatar {
+  width: 80px;
+  height: 80px;
+  background-color: #111827;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  flex-shrink: 0; /* Prevents the circle from squishing down */
+}
+
+/* 5. Typography */
+.profile-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-name {
+  margin: 0;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #111827;
+  line-height: 1.2;
+}
+
+.profile-subtitle {
+  color: #6b7280;
+  font-size: 0.95rem;
+  margin: 0.25rem 0 0 0; /* Tighter margin so it hugs the name */
+}
+
+/* 6. Logout Button (Corner position) */
+.btn-logout {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+
+  /* Shrunk down so it doesn't dominate the card */
+  padding: 0.5rem 0.8rem;
+  background-color: transparent;
+  color: #dc2626;
+  border: 1px solid transparent; /* Ghost button style */
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-logout:hover {
+  background-color: #fef2f2;
+  border-color: #fca5a5; /* Shows a subtle red border on hover */
+}
+
+/* Optional: Mobile Adjustments */
+@media (max-width: 480px) {
+  .profile-content {
+    flex-direction: column; /* Stacks avatar and text on very small phones */
+    text-align: center;
+  }
+
+  .btn-logout {
+    /* Optionally move the logout button to the bottom on tiny screens */
+    position: static;
+    width: 100%;
+    margin-top: 2rem;
+    border: 1px solid #dc2626;
+  }
+}

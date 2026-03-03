@@ -1,0 +1,6 @@
+@DavaoCityExplorerAPI_HostAddress = http://localhost:5173
+
+GET {{DavaoCityExplorerAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

@@ -1,0 +1,151 @@
+
+.detail-page {
+  /* The Nav Bypass: Push content down so it doesn't hide behind absolute nav */
+  padding-top: 140px; /* Adjust based on your nav height */
+
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-bottom: 4rem;
+
+  background-color: white;
+  min-height: 100vh;
+}
+
+.footprint-list {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem 0;
+  font-size: 0.9rem;
+
+  /* Grey out everything by default */
+  color: #9ca3af;
+}
+
+.footprint-list a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s;
+  text-transform: capitalize;
+}
+
+.footprint-list a:hover {
+  color: #111827; /* Darken on hover */
+}
+
+/* Target the VERY LAST item in the list and make it active/black */
+.footprint-list li:last-child {
+  color: #111827;
+  font-weight: 600;
+}
+
+/* --------------------------------------
+   3. DETAIL SECTION (Side-by-Side)
+--------------------------------------- */
+.detail-section {
+  display: grid;
+  /* Left column gets slightly more space (1.2) than right column (1) */
+  grid-template-columns: 1.2fr 1fr;
+  gap: 3rem;
+  margin-bottom: 4rem;
+}
+
+.image-area {
+  width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  /* Forces the image box to be a nice rectangle even before loading */
+  aspect-ratio: 4 / 3;
+  background-color: #f3f4f6; /* Placeholder grey */
+}
+
+.detail-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.description-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centers the text vertically next to the image */
+}
+
+.place-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #111827;
+  margin: 0 0 1rem 0;
+}
+
+.place-rating {
+  display: inline-block;
+  background: #fef08a; /* Soft yellow */
+  color: #854d0e;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-weight: bold;
+  width: fit-content;
+  margin-bottom: 1rem;
+}
+
+.place-location {
+  color: #6b7280;
+  font-size: 1.1rem;
+}
+
+/* --------------------------------------
+   4. SUB-MENU (Tabs)
+--------------------------------------- */
+.sub-menu {
+  display: flex;
+  gap: 3rem;
+  /* A light grey line under all the tabs */
+  border-bottom: 1px solid #e5e7eb;
+  margin-bottom: 2rem;
+}
+
+.menu-item {
+  cursor: pointer;
+  padding-bottom: 1rem;
+
+  /* Greyed out by default */
+  color: #9ca3af;
+  font-weight: 500;
+  font-size: 1.1rem;
+  transition: all 0.2s ease;
+
+  /* Prepares a transparent bottom border so the text doesn't jump on hover */
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px; /* Overlaps the container's border-bottom */
+}
+
+.menu-item p {
+  margin: 0;
+}
+
+.menu-item:hover {
+  color: #4b5563;
+}
+
+.menu-item.active {
+  color: #111827;
+  border-bottom: 2px solid #111827;
+}
+
+@media (max-width: 768px) {
+  .detail-section {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .sub-menu {
+    gap: 1.5rem;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
