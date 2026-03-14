@@ -17,8 +17,6 @@ public class PlacesController : ControllerBase
         _context = context;
     }
 
-
-    // Get all places
     [HttpGet]
     public async Task<ActionResult<IEnumerable<PlaceModel>>> GetPlaces()
     {
@@ -32,8 +30,6 @@ public class PlacesController : ControllerBase
         return Ok(places);
     }
 
-
-    // Get specific place by ID
     [HttpGet("{id}")] 
     public async Task<ActionResult<PlaceModel>> GetPlace(int id)
     {
