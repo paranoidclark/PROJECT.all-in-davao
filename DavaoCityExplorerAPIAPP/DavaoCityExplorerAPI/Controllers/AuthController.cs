@@ -24,6 +24,7 @@ public class AuthController : ControllerBase
         _config = config;
     }
 
+    // Add user to database
     [HttpPost("register")]
     public async Task<ActionResult<string>> Register(UserDto request)
     {
@@ -51,6 +52,7 @@ public class AuthController : ControllerBase
         return Ok("User successfully registered");
 
     }
+
 
     [HttpPost("login")]
     public async Task<ActionResult<string>> Login(UserDto request)
@@ -96,6 +98,8 @@ public class AuthController : ControllerBase
         return tokenHandler.WriteToken(token);
     }
 
+
+    // Get all information about specific user
     [Authorize]
     [HttpGet("me")]
     public ActionResult GetUserProfile()
