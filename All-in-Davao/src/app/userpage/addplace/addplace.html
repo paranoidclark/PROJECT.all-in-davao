@@ -1,0 +1,39 @@
+<div class="form-wrapper">
+  <div class="form-card">
+
+    <div class="form-header">
+      <h2 class="form-title">Add New Place</h2>
+      <p class="form-subtitle">Enter the details to list a new destination.</p>
+    </div>
+
+    <form class="crud-form">
+
+      <div class="input-group">
+        <label for="place-name">Name</label>
+        <input type="text" id="place-name" placeholder="e.g., People's Park">
+      </div>
+
+      <div class="input-group">
+        <label for="place-location">Location</label>
+        <input type="text" id="place-location" placeholder="e.g., Palma Gil St, Poblacion">
+      </div>
+
+      <div class="input-group">
+        <label for="place-tags">Tags</label>
+        <input type="text" id="place-tags" placeholder="e.g., Public Park, Family, Nature">
+        <small class="hint-text">Separate multiple tags with a comma.</small>
+      </div>
+
+      <div class="future-modules-box">
+        <span class="icon">🚧</span>
+        <p>Image Upload and Rating components will be placed here.</p>
+      </div>
+
+      <div class="form-actions">
+        <a routerLink="/user"><button type="button" class="btn-secondary">Cancel</button></a>
+        <button type="submit" class="btn-primary">Save Place</button>
+      </div>
+
+    </form>
+  </div>
+</div>

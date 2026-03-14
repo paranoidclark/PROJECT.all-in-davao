@@ -1,11 +1,13 @@
 import {ChangeDetectorRef, Component, inject, OnDestroy, OnInit} from '@angular/core';
 import {ThemeService} from '../services/theme.service';
 import {AuthService} from '../services/auth.service';
-import {Router} from '@angular/router';
+import {Router, RouterLink} from '@angular/router';
 
 @Component({
   selector: 'app-userpage',
-  imports: [],
+  imports: [
+    RouterLink
+  ],
   templateUrl: './userpage.html',
   styleUrl: './userpage.css',
 })

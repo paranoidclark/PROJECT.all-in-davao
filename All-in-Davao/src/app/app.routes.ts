@@ -6,6 +6,7 @@ import {Login} from './login/login';
 import {Signup} from './signup/signup';
 import {Userpage} from './userpage/userpage';
 import {authGuard} from './guards/auth-guard';
+import {Addplace} from './userpage/addplace/addplace';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -17,5 +18,5 @@ export const routes: Routes = [
 
   /* Auth Pages */
   { path: 'user', component: Userpage, canActivate: [authGuard] },
-
+  { path: 'add-place', component: Addplace, canActivate: [authGuard] },
 ];
